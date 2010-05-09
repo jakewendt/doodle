@@ -10,3 +10,6 @@ sudo port clean imagemagick
 sudo port install imagemagick +perl
 
 
+create a dir tmp/ with web app writability to store the created png
+
+
