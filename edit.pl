@@ -1,4 +1,4 @@
-#!/usr/bin/env perl -w
+#!/opt/local/bin/perl -w
 
 use lib '/opt/local/lib/perl5';
 use strict;

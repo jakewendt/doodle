@@ -1,4 +1,4 @@
-#!/usr/bin/env perl -w
+#!/opt/local/bin/perl -w
 
 use strict;
 use CGI qw(:standard);
