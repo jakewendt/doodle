@@ -3,5 +3,10 @@ Coming Soon
 
 == Requirements
 
-ImageMagick
+ImageMagick : http://www.imagemagick.org
+PerlMagick : http://www.imagemagick.org/script/perl-magick.php
+
+sudo port clean imagemagick
+sudo port install imagemagick +perl
+
 
