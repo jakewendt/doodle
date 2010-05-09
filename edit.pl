@@ -1,5 +1,6 @@
-#!/usr/bin/perl -w
+#!/usr/bin/env perl -w
 
+use lib '/opt/local/lib/perl5';
 use strict;
 use CGI qw(:standard);
 use Image::Magick;
