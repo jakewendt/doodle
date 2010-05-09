@@ -15,15 +15,8 @@ foreach my $y ( 0 .. $height-1 ) {
 	foreach my $x ( 0 .. $width-1 ) {
 		my $c = shift(@colors);
 		$image->Set("pixel[$x,$y]"=>$c ) if ( $c );
-#		$image->Set('pixel['.$x.','.$y.']'=>$c ) if ( $c );
-#		$image->Set('pixel['.$x.','.$y.']'=>shift(@colors)) if ( $c !~ /transparent/ );
 	}
 }
-#	print CGI::header(
-#	-type => 'image/png'
-#	), $a;
-#	
-#$image->Write("png:-");
 
 my $file = MyTime();
 $image->Comment("This image was created using http://doodle.jakewendt.com");
