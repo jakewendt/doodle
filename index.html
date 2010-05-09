@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Doodle!</title>
+<script src="js/prototype.js" type="text/javascript"></script>
+<script src="js/defaultInput.js" type="text/javascript"></script>
+<script src="doodle.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="doodle.css" />
+<body>
+<h1 id='header'>Doodle!</h1>
+<div id='content'>
+<form class='main' action='edit.pl' method='get' onsubmit='return validate_form(this)'>
+	<input class='default' type='text' size='10' name='height' id='height' />
+	x <input class='default' type='text' size='10' name='width'  id='width'  />
+	<br />
+	Pixel Size:
+	<select name="pixel">
+		<option value="15" selected="selected">15</option>
+		<option value="10">10</option>
+		<option value="5">5</option>
+		<option value="3">3</option>
+	</select>
+	<input type='submit' value='New'/>
+</form>
+
+<br />
+<form class='main' action='edit.pl' method='post' enctype='multipart/form-data' >
+	<p>Import and Edit</p>
+	<input type='file' name='fn' />
+	<br />
+	Pixel Size:
+	<select name="pixel">
+		<option value="15" selected="selected">15</option>
+		<option value="10">10</option>
+		<option value="5">5</option>
+		<option value="3">3</option>
+	</select>
+	<input type='submit' value='Open'/>
+</form>
+
+<br />
+<p>Warning!  Big pictures WILL take a while to process causing your browser to complain that the script has become unresponsive!  You must allow it to continue if you wish to use this software.</p>
+</div>
+
+</body>
+</html>
