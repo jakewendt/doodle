@@ -1,6 +1,6 @@
-#!/opt/local/bin/perl -w
+#!/usr/bin/perl -w
 
-use lib '/opt/local/lib/perl5';
+#use lib '/opt/local/lib/perl5';
 use strict;
 use CGI qw(:standard);	# NEEDED for redirect
 use Image::Magick;
@@ -21,9 +21,15 @@ foreach my $y ( 0 .. $height-1 ) {
 
 my $file = MyTime();
 $image->Comment("This image was created using http://doodle.jakewendt.com");
-$image->Write("tmp/$file.png");
+my $ret = $image->Write("tmp/$file.png");
 
-print redirect ( "show.pl?pic=$file" );
+print header;
+print start_html;
+print $ret if $ret;
+print "<a href='show.pl?pic=$file'>Your Pic</a>";
+print end_html;
+
+#print redirect ( "show.pl?pic=$file" );
 
 exit 0;
 
