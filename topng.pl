@@ -41,6 +41,12 @@ sub MyTime {
 	foreach (@date){ $_ = "0${_}" if ($_ < 10); }
 	# removed "(UTC)" when RIL did same;  SPR 493.
 	#  my $date = "$date[5]-$date[4]-$date[3]T$date[2]:$date[1]:$date[0](UTC)";
-	my $date = "$date[5]-$date[4]-$date[3]T$date[2]:$date[1]:$date[0]";
+#
+#	my $date = "$date[5]-$date[4]-$date[3]T$date[2]:$date[1]:$date[0]";
+#		for some reason the :'s cause ...
+#		Exception 420: no encode delegate for this image format `tmp/2010-05-10T21:44:48.png' 
+#		@ error/constitute.c/WriteImage/1159
+#
+	my $date = "$date[5]$date[4]$date[3]T$date[2]$date[1]$date[0]";
 	return $date;
 }
