@@ -1,4 +1,6 @@
-#!/usr/bin/perl -w
+#!/bin/sh
+eval 'exec perl -x $0 ${1+"$@"}'
+#!perl -w
 
 use strict;
 use CGI qw(:standard);

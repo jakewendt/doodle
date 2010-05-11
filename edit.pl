@@ -1,6 +1,8 @@
-#!/usr/bin/perl -w
+#!/bin/sh
+eval 'exec perl -x $0 ${1+"$@"}'
+#!perl -w
 
-#use lib '/opt/local/lib/perl5';
+use lib '/opt/local/lib/perl5';
 use strict;
 use CGI qw(:standard);
 use Image::Magick;
