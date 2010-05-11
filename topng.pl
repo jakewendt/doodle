@@ -19,17 +19,19 @@ foreach my $y ( 0 .. $height-1 ) {
 	}
 }
 
+mkdir 'tmp' unless ( -d 'tmp' );
+
 my $file = MyTime();
 $image->Comment("This image was created using http://doodle.jakewendt.com");
 my $ret = $image->Write("tmp/$file.png");
 
-print header;
-print start_html;
-print $ret if $ret;
-print "<a href='show.pl?pic=$file'>Your Pic</a>";
-print end_html;
+#print header;
+#print start_html;
+#print $ret if $ret;
+#print "<a href='show.pl?pic=$file'>Your Pic</a>";
+#print end_html;
 
-#print redirect ( "show.pl?pic=$file" );
+print redirect ( "show.pl?pic=$file" );
 
 exit 0;
 
